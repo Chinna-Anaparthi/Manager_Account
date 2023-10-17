@@ -30,6 +30,18 @@ app.get('/RegularFieldWorkRetrive', (req, res) => {
 app.put('/RegularFieldWork-Status-Update/:employeeId', (req, res) => {
   Server.FieldworkStatusUpdate(req, res, () => { });
 })
+
+app.post('/TrainingWorkshop', (req, res) => {
+    Server.TrainingWorkshopPost(req, res, () => { });
+})
+
+app.get('/TrainingWorkshopRetrive', (req, res) => {
+    Server.TrainingWorkshopGet(req, res, () => { })
+})
+
+app.put('/TrainingWorkshop-Status-Update/:employeeId', (req, res) => {
+    Server.TrainingWorkshopstatusUpdate(req, res, () => { });
+})
 const port = process.env.PORT;
 app.listen(port,()=>{
     console.log(`server is running on ${port}`)
