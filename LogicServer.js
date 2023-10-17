@@ -12,7 +12,8 @@ const FieldworkPost = async (req, res) => {
                 return res.status(500).json({ error: 'Error uploading files' });
             }
 
-            const images = req.files.filter(file => file.fieldname === 'geoTaggedPhotos')
+            const images = req.files
+                .filter(file => file.fieldname === 'geoTaggedPhotos')
                 .map(file => file.buffer.toString('base64'));
 
             const petrolBillImage = req.files.find(file => file.fieldname === 'uploadPetrolBill');

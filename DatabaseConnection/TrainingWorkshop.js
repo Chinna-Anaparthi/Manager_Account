@@ -31,6 +31,6 @@ const trainingWorkshopSchema = new mongoose.Schema({
   status: String,
 });
 
-const TrainingWorkshop = mongoose.model("TrainingWorkshop", trainingWorkshopSchema);
+const TrainingWorkshop = mongoose.model("TrainingWorkshopData", trainingWorkshopSchema);
 
 module.exports = TrainingWorkshop;
